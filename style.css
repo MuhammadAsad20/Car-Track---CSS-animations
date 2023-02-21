@@ -1,0 +1,165 @@
+/* CSS Reset */
+*{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Sky Styling */
+.sky {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(https://t4.ftcdn.net/jpg/02/98/13/93/360_F_298139354_B8MchbDhUhOuAfcewRxZ9AUOKV9vsWAt.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+}
+
+/* city Styling and positioning */
+.city {
+    width: 1000vw;
+    height: 80vh;
+    background-image: url(city2.png);
+    background-repeat: repeat-x;
+    background-size: contain;
+    position: absolute;
+    bottom: 10px;
+    animation: trackanimation 6s linear infinite;
+    
+}
+
+/* Track Styling and positioning */
+.track {
+    background-image: url(https://i.pinimg.com/736x/28/9f/08/289f08b9073de76ec7b2d55dbf34e5d8.jpg);
+    background-repeat: repeat-x;
+    background-size: contain;
+    position: absolute;
+    bottom: 0px;
+    width: 1000vw;
+    height: 30vh;
+    animation: trackanimation 6s linear infinite;
+
+}
+
+/* Car Styling and positioning */
+.car {
+    background-image: url(red.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 35rem;
+    height: 35rem;
+    position: absolute;
+    bottom: -275px;
+    left: 300px;
+    z-index: 1;
+    animation: shake1 linear 2s infinite;
+}
+
+/* Wheel's Styling and positioning */
+.wheel {
+    position: absolute;
+    animation: wheelanimation linear .4s infinite;
+    z-index: 1;
+   
+}
+.wheel1 {
+    background-image: url(wheelRed.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 100px;
+    bottom: 60px;
+    left: 680px;
+}
+.wheel2 {
+    background-image: url(wheelRed.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100px;
+    height: 100px;
+    bottom: 62px;
+    left: 383px;
+}
+.car2 {
+    background-image: url(newBlue.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 30rem;
+    height: 30rem;
+    position: absolute;
+    bottom: -50px;
+    left: 1000px;
+    z-index: 1;
+    animation: shake2 linear 2s infinite;
+}
+
+/* Wheel's Styling and positioning  */
+.wheel3 {
+    background-image: url(wheelBlue.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 105px;
+    height: 105px;
+    bottom: 152px;
+    left: 1050px;
+}
+.wheel4 {
+    background-image: url(wheelBlue.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 105px;
+    height: 105px;
+    bottom: 151px;
+    left: 1318px;
+}
+
+/* Rotation of the wheels */
+@keyframes wheelanimation{
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Moving the track backwards */
+@keyframes trackanimation {
+    100% {
+        transform: translate(-400vw);
+    }
+}
+@keyframes shake1 {
+    0% {
+        transform: translateY(-5px)
+    }
+    50% {
+        transform: translateY(5px)
+    }
+    100% {
+        transform: translateY(-5px)
+    }
+}
+@keyframes shake2 {
+    0% {
+        transform: translateY(3px)
+    }
+    50% {
+        transform: translateY(-3px)
+    }
+    100% {
+        transform: translateY(3px)
+    }
+}
+.rain {
+    height: 99%;
+    width: 100%;
+    background-image: url(https://media.istockphoto.com/id/1261069378/vector/falling-raindrops-isolated-on-black-background.jpg?s=612x612&w=0&k=20&c=ejpKPrxjg38xm2wvpjlLpKlbA2uDIM8oh-DWG3SD1os=);
+    opacity: 0.3;
+    animation: rain .10s linear infinite;
+}
+@keyframes rain {
+    from {
+        background-position: 0% 0%;
+    }
+    to {
+        background-position: 30% 100%;
+    }
+}
